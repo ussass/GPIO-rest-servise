@@ -18,7 +18,7 @@ def set_water():
     req = request.get_json()
     Water_counter.hot = req["hot"]
     Water_counter.cold = req["cold"]
-    return jsonify({'water': True})
+    return jsonify({'water_update': True})
 
 
 if __name__ == "__main__":
