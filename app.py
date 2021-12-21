@@ -2,7 +2,7 @@ import threading
 
 from flask import Flask, jsonify, request
 
-from Water_counter import Water_counter
+from Water_counter import Water_counter, go_count
 
 app = Flask(__name__)
 
@@ -23,3 +23,4 @@ def set_water():
 
 if __name__ == "__main__":
     threading.Thread(target=lambda: app.run(debug=True, use_reloader=False)).start()
+go_count()
